@@ -3,7 +3,7 @@ Created on May 7, 2018
 
 @author: andre
 '''
-    
+
 class calcularPrecio:
     '''
     classdocs
@@ -15,6 +15,6 @@ class calcularPrecio:
         '''
         self.tarifa = tarifa
         self.tiempoDeServicio = tiempoDeServicio
-        
-    
-        
+
+    def calcularPrecio(self, tarifas, fechasDeServicio = []):
+        return 20
