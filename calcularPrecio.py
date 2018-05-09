@@ -3,18 +3,26 @@ Created on May 7, 2018
 
 @author: andre
 '''
+from datetime import datetime, date, time, timedelta
 
 class calcularPrecio:
     '''
     classdocs
     '''
 
-    def __init__(self, tarifa, tiempoDeServicio):
+    def __init__(self):
         '''
         Constructor
         '''
-        self.tarifa = tarifa
-        self.tiempoDeServicio = tiempoDeServicio
+
 
     def calcularPrecio(self, tarifas, fechasDeServicio = []):
-        return 20
+        tiempoDeServicio = fechasDeServicio[1] - fechasDeServicio[0]
+        if (tiempoDeServicio.seconds/60 >= 15):
+            return 20
+        else:
+            pass
+    
+tiempoI = datetime.strptime('Jun 01 2005 23:50', '%b %d %Y %H:%M')
+tiempoF = datetime.strptime('Jun 02 2005 00:10', '%b %d %Y %H:%M')
+print((tiempoF - tiempoI).seconds/60)
