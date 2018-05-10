@@ -1,7 +1,8 @@
 '''
 Created on May 7, 2018
 
-@author: andre
+@author: Andre Corcuera
+@author: Angel Morante
 '''
 import unittest
 from datetime import datetime, date, time, timedelta
