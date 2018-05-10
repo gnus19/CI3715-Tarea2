@@ -18,6 +18,8 @@ class calcularPrecio:
 
     def calcularPrecio(self, tarifas, fechasDeServicio = []):
         tiempoDeServicio = fechasDeServicio[1] - fechasDeServicio[0]
+        if(tarifas.tarifaNormal < 0 or tarifas.tarifaFinDeSemana < 0):
+            return
         if (tiempoDeServicio.seconds/60 >= 15):
             return tarifas.tarifaNormal*((tiempoDeServicio.seconds//3600) + 1)
         else:
